@@ -1,0 +1,26 @@
+.Collapsible {
+  background: #27CE0D;
+  margin-top: 8px;
+  border-radius: 8px;
+}
+
+.Collapsible__trigger {
+ color: #fff;
+  //font-weight: bold;
+  padding: 1rem;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+  background: #0b0b13;
+  border-radius: 8px 8px 0 0;
+}
+
+.Collapsible__contentOuter {
+
+}
+
+.Collapsible__contentInner {
+  padding: 1rem;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  color: #fff;
+}
