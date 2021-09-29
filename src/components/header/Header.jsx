@@ -20,6 +20,7 @@ import {GiFrog, GiEyeball} from 'react-icons/gi';
 import {motion} from "framer-motion";
 import Sword from "../../assets/sword/sword.png";
 import Sword1 from "../../assets/sword/sword1.png";
+import {useMediaQuery} from "react-responsive";
 
 // import {
 //   // FaHome,
@@ -94,12 +95,25 @@ const Header = () => {
 
     const [isOpen, setIsOpen] = useState(true);
 
+    const isTabletOrMobile = useMediaQuery({ query: '(max-width: 750px)' })
+
     useEffect(() => {
         setIsOpen(false);
     }, [])
 
     return (
         <>
+
+            <div className={'mob-header'}>
+                <button className="toggler-menu" onClick={handleClick}>
+                    <div className={click ? "active" : ""}>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+            </div>
+
             {/* Header */}
             <motion.div initial={{
                 zIndex: 5,
@@ -174,9 +188,10 @@ const Header = () => {
 
             {/* nav bar */}
             <motion.div initial={{
-                zIndex: 5,
+
+                zIndex: !isTabletOrMobile ? 5 : '',
             }} animate={{
-                zIndex: 0,
+                zIndex: !isTabletOrMobile ? 0 : '',
                 transition: {
                     delay: 5,
                 }

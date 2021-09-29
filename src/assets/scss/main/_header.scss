@@ -18,9 +18,10 @@
   .scroll-bar {
     height: 100%;
     @include down-sm {
+    z-index: 10;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      //justify-content: space-between;
     }
   }
   .hl-top {
