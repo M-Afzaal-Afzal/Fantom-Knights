@@ -234,3 +234,17 @@
   top: 18px;
   transform: rotate(-45deg);
 }
+
+.animation-container-desktop {
+  display: block;
+  @include down-sm {
+    display: none;
+  }
+}
+
+.animation-container-mobile {
+  display: none;
+  @include down-sm {
+    display: block;
+  }
+}
